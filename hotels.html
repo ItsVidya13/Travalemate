@@ -1,0 +1,113 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotels | TravelMate</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head> <body> <header class="navbar"> <div class="container nav-container">
+    <a href="index.html" class="logo">
+        <span class="logo-icon">✈</span>
+        <span>TravelMate</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Plan Trip</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="hotels.html" class="active">Hotels</a>
+        <a href="my-trips.html">My Trips</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+</div>
+
+</header> <section class="page-header"> <div class="container"> <h1>Find Your Perfect Stay</h1> <p>Choose a comfortable hotel for your TravelMate journey.</p> </div> </section> <section class="section"> <div class="container">
+    <div class="section-heading">
+        <span class="section-label">HOTELS</span>
+        <h2>Choose Your Hotel</h2>
+        <p id="hotelDestination">
+            Select a hotel that matches your trip and budget.
+        </p>
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filter-bar">
+
+        <input
+            type="text"
+            id="hotelSearch"
+            placeholder="Search hotels..."
+        >
+
+        <input
+            type="number"
+            id="priceFilter"
+            placeholder="Max price ₹"
+            min="0"
+        >
+
+        <select id="ratingFilter">
+            <option value="0">Any Rating</option>
+            <option value="4">4+ Rating</option>
+            <option value="4.5">4.5+ Rating</option>
+        </select>
+
+        <select id="hotelSort">
+            <option value="default">Recommended</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+        </select>
+
+    </div>
+
+
+    <!-- HOTEL GRID -->
+
+    <div id="hotelGrid" class="hotel-grid"></div>
+
+</div>
+
+</section> <!-- HOTEL DETAILS MODAL --> <div class="modal" id="hotelModal">
+<div class="modal-content">
+
+    <button class="modal-close" id="modalClose">
+        ×
+    </button>
+
+    <img
+        id="modalImage"
+        class="modal-image"
+        src=""
+        alt="Hotel"
+    >
+
+    <h2 id="modalName"></h2>
+
+    <p id="modalLocation"></p>
+
+    <p id="modalDescription"></p>
+
+    <div id="modalFacilities" class="hotel-facilities"></div>
+
+    <div class="hotel-price">
+        <strong id="modalPrice"></strong>
+        <span>per night</span>
+    </div>
+
+    <button
+        id="modalSelect"
+        class="btn btn-primary"
+        style="width:100%;">
+
+        Select This Hotel
+
+    </button>
+
+</div>
+
+</div> <script src="js/main.js"></script> <script src="js/hotels.js"></script> </body> </html>

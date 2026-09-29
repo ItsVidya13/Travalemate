@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelMate - Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-page">
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✈</span>
+            Travel<span>Mate</span>
+        </a>
+
+        <a href="index.html" class="btn btn-primary btn-small">
+            ← Home
+        </a>
+
+    </div>
+</header>
+
+<main class="auth-container">
+
+    <div class="auth-card">
+
+        <section class="auth-info">
+
+            <div class="auth-info-content">
+
+                <div class="auth-logo">
+                    ✈️
+                </div>
+
+                <h1>
+                    Your Journey
+                    Starts Here
+                </h1>
+
+                <p>
+                    Plan amazing trips, discover destinations,
+                    select hotels and manage everything from one place.
+                </p>
+
+                <div class="auth-benefits">
+
+                    <div class="auth-benefit">
+                        <span>✓</span>
+                        <p>Personalized travel planning</p>
+                    </div>
+
+                    <div class="auth-benefit">
+                        <span>✓</span>
+                        <p>Discover beautiful destinations</p>
+                    </div>
+
+                    <div class="auth-benefit">
+                        <span>✓</span>
+                        <p>Manage your trips easily</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="auth-form-section">
+
+            <div class="auth-form-header">
+                <h2>Welcome Back</h2>
+                <p>Login to continue planning your trip.</p>
+            </div>
+
+            <div id="loginMessage" class="form-message"></div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="email">
+                        Username / Email
+                    </label>
+
+                    <input
+                        type="text"
+                        id="email"
+                        placeholder="Enter username or email"
+                        required>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required>
+                </div>
+
+                <br>
+
+                <div class="login-options">
+
+                    <label class="checkbox-label">
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+                        Remember me
+                    </label>
+
+                    <a href="#" id="forgotPassword">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary auth-submit">
+
+                    Login →
+
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                OR
+            </div>
+
+            <p class="register-text">
+                Don't have an account?
+                <a href="#" id="createAccount">
+                    Create Account
+                </a>
+            </p>
+
+            <div class="demo-login">
+
+                <strong>
+                    Demo Login
+                </strong>
+
+                Username:
+                <b>demo</b>
+
+                <br>
+
+                Password:
+                <b>123456</b>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Summary | TravelMate</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">✈</span>
+
+            <span>TravelMate</span>
+
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Plan Trip
+            </a>
+
+            <a href="destinations.html">
+                Destinations
+            </a>
+
+            <a href="hotels.html">
+                Hotels
+            </a>
+
+            <a href="my-trips.html">
+                My Trips
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            Trip Summary
+        </h1>
+
+        <p>
+            Review your complete travel plan before booking.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SUMMARY
+===================================================== -->
+
+<section class="summary-section">
+
+    <div class="container">
+
+
+        <div id="noTrip"
+             class="empty-state"
+             style="display:none;">
+
+            <div class="empty-state-icon">
+                ✈️
+            </div>
+
+            <h2>
+                No Trip Found
+            </h2>
+
+            <p>
+                Please create a trip before viewing the summary.
+            </p>
+
+            <a
+                href="dashboard.html"
+                class="btn btn-primary">
+
+                Plan My Trip →
+
+            </a>
+
+        </div>
+
+
+
+        <div
+            id="summaryContent"
+            class="summary-grid">
+
+
+            <!-- =================================================
+                 LEFT
+            ================================================= -->
+
+            <div>
+
+
+                <!-- TRIP INFORMATION -->
+
+                <div class="summary-card">
+
+                    <h2>
+                        ✈️ Trip Details
+                    </h2>
+
+
+                    <div class="summary-info">
+
+
+                        <div>
+
+                            <small>
+                                Destination
+                            </small>
+
+                            <strong id="destination">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Travelers
+                            </small>
+
+                            <strong id="travelers">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Start Date
+                            </small>
+
+                            <strong id="startDate">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                End Date
+                            </small>
+
+                            <strong id="endDate">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Duration
+                            </small>
+
+                            <strong id="duration">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Budget
+                            </small>
+
+                            <strong id="budget">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Travel Style
+                            </small>
+
+                            <strong id="travelStyle">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HOTEL -->
+
+                <div class="summary-card">
+
+                    <h2>
+                        🏨 Selected Hotel
+                    </h2>
+
+
+                    <div id="hotelInfo">
+
+                        <p>
+                            No hotel selected yet.
+                        </p>
+
+                        <a
+                            href="hotels.html"
+                            class="btn btn-primary">
+
+                            Choose Hotel
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITINERARY -->
+
+                <div class="summary-card">
+
+                    <h2>
+                        📍 Itinerary
+                    </h2>
+
+
+                    <div id="itineraryInfo">
+
+                        <div class="summary-day">
+
+                            <h3>
+                                Your trip itinerary
+                            </h3>
+
+                            <p>
+                                Your itinerary will appear here after
+                                planning your trip.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT
+            ================================================= -->
+
+            <div>
+
+
+                <!-- TOTAL BUDGET -->
+
+                <div class="total-budget">
+
+                    <p>
+                        Estimated Hotel Cost
+                    </p>
+
+                    <h2 id="totalCost">
+                        ₹0
+                    </h2>
+
+                    <p id="costDescription">
+                        Select a hotel to calculate your cost.
+                    </p>
+
+                </div>
+
+
+                <!-- BOOKING CARD -->
+
+                <div
+                    class="summary-card"
+                    style="margin-top:20px;">
+
+                    <h2>
+                        Ready to Book?
+                    </h2>
+
+
+                    <p style="
+                        color:var(--text);
+                        margin-bottom:20px;
+                    ">
+
+                        Review your trip details and continue
+                        to complete your hotel booking.
+
+                    </p>
+
+
+                    <a
+                        href="hotels.html"
+                        class="btn"
+                        style="
+                            width:100%;
+                            margin-bottom:10px;
+                            background:#f5f9fc;
+                            color:var(--dark);
+                        ">
+
+                        ← Change Hotel
+
+                    </a>
+
+
+                    <a
+                        id="bookingButton"
+                        href="booking.html"
+                        class="btn btn-primary"
+                        style="width:100%;">
+
+                        Continue to Booking →
+
+                    </a>
+
+                </div>
+
+
+                <!-- MY TRIPS -->
+
+                <div
+                    class="summary-card"
+                    style="margin-top:20px;">
+
+                    <a
+                        href="my-trips.html"
+                        class="btn btn-secondary"
+                        style="width:100%;">
+
+                        View My Trips
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/main.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /*
+    =====================================================
+    GET DATA
+    =====================================================
+    */
+
+    let trip = null;
+    let hotel = null;
+
+
+    try {
+
+        trip = JSON.parse(
+            localStorage.getItem("travelmateTrip") || "null"
+        );
+
+
+        hotel = JSON.parse(
+            localStorage.getItem("travelmateHotel") || "null"
+        );
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Unable to read saved trip data.",
+            error
+        );
+
+    }
+
+
+
+    /*
+    =====================================================
+    CHECK TRIP
+    =====================================================
+    */
+
+    if (!trip) {
+
+        document.getElementById("summaryContent").style.display =
+            "none";
+
+        document.getElementById("noTrip").style.display =
+            "block";
+
+        return;
+
+    }
+
+
+
+    /*
+    =====================================================
+    TRIP VALUES
+    =====================================================
+    */
+
+    document.getElementById("destination").textContent =
+        trip.destination || "Not selected";
+
+
+    document.getElementById("travelers").textContent =
+        (trip.travelers || 1) + " traveler(s)";
+
+
+    document.getElementById("startDate").textContent =
+        formatDate(trip.startDate);
+
+
+    document.getElementById("endDate").textContent =
+        formatDate(trip.endDate);
+
+
+    const days =
+        trip.days ||
+        calculateDays(
+            trip.startDate,
+            trip.endDate
+        );
+
+
+    document.getElementById("duration").textContent =
+        days + " day(s)";
+
+
+    document.getElementById("budget").textContent =
+        trip.budget || "Not specified";
+
+
+    document.getElementById("travelStyle").textContent =
+        trip.travelStyle || "Not specified";
+
+
+
+    /*
+    =====================================================
+    HOTEL
+    =====================================================
+    */
+
+    const hotelInfo =
+        document.getElementById("hotelInfo");
+
+
+    if (!hotel) {
+
+        hotelInfo.innerHTML = `
+
+            <div class="empty-state"
+                 style="
+                    padding:30px 15px;
+                    margin:0;
+                 ">
+
+                <div class="empty-state-icon">
+                    🏨
+                </div>
+
+                <h3>
+                    No Hotel Selected
+                </h3>
+
+                <p>
+                    Choose a hotel to see the complete
+                    booking cost.
+                </p>
+
+                <a
+                    href="hotels.html"
+                    class="btn btn-primary">
+
+                    Choose Hotel →
+
+                </a>
+
+            </div>
+
+        `;
+
+
+        document.getElementById("totalCost").textContent =
+            "₹0";
+
+
+        document.getElementById("costDescription").textContent =
+            "Select a hotel to calculate your cost.";
+
+
+        document.getElementById("bookingButton").style.display =
+            "none";
+
+
+        return;
+
+    }
+
+
+
+    /*
+    =====================================================
+    HOTEL DETAILS
+    =====================================================
+    */
+
+    const hotelPrice =
+        Number(hotel.price) || 0;
+
+
+    const numberOfNights =
+        Math.max(
+            1,
+            Number(days) - 1
+        );
+
+
+    const total =
+        hotelPrice * numberOfNights;
+
+
+    hotelInfo.innerHTML = `
+
+        <div style="
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            align-items:flex-start;
+        ">
+
+            <img
+                src="${hotel.image || "assets/images/hero.jpg"}"
+                alt="${hotel.name || "Hotel"}"
+                style="
+                    width:220px;
+                    height:160px;
+                    object-fit:cover;
+                    border-radius:12px;
+                "
+                onerror="
+                    this.src='assets/images/hero.jpg'
+                "
+            >
+
+
+            <div style="flex:1;">
+
+                <h3 style="margin-bottom:7px;">
+                    ${hotel.name || "Selected Hotel"}
+                </h3>
+
+
+                <p style="
+                    color:var(--muted);
+                    font-size:13px;
+                    margin-bottom:10px;
+                ">
+
+                    📍 ${hotel.location || "Location unavailable"}
+
+                </p>
+
+
+                <p style="
+                    color:#f59e0b;
+                    margin-bottom:10px;
+                ">
+
+                    ★ ${hotel.rating || "N/A"}
+
+                </p>
+
+
+                <p style="
+                    color:var(--text);
+                    font-size:14px;
+                    margin-bottom:12px;
+                ">
+
+                    ${hotel.description || ""}
+
+                </p>
+
+
+                <strong style="
+                    color:var(--primary-dark);
+                    font-size:20px;
+                ">
+
+                    ₹${hotelPrice.toLocaleString("en-IN")}
+
+                    <span style="
+                        font-size:12px;
+                        color:var(--muted);
+                    ">
+
+                        / night
+
+                    </span>
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+
+    /*
+    =====================================================
+    COST
+    =====================================================
+    */
+
+    document.getElementById("totalCost").textContent =
+        "₹" + total.toLocaleString("en-IN");
+
+
+    document.getElementById("costDescription").textContent =
+        "₹" +
+        hotelPrice.toLocaleString("en-IN") +
+        " × " +
+        numberOfNights +
+        " night(s)";
+
+
+
+    /*
+    =====================================================
+    ITINERARY
+    =====================================================
+    */
+
+    document.getElementById("itineraryInfo").innerHTML = `
+
+        <div class="summary-day">
+
+            <h3>
+                Day 1
+            </h3>
+
+            <p>
+                Arrive at ${trip.destination}.
+                Check in to your hotel and explore
+                the destination.
+            </p>
+
+        </div>
+
+
+        <div class="summary-day">
+
+            <h3>
+                Day 2
+            </h3>
+
+            <p>
+                Explore the major attractions,
+                local food and nearby places.
+            </p>
+
+        </div>
+
+
+        <div class="summary-day">
+
+            <h3>
+                Remaining Days
+            </h3>
+
+            <p>
+                Enjoy your planned activities and
+                discover more of ${trip.destination}.
+            </p>
+
+        </div>
+
+    `;
+
+});
+
+
+
+/*
+=====================================================
+FORMAT DATE
+=====================================================
+*/
+
+function formatDate(dateString) {
+
+    if (!dateString) {
+        return "Not selected";
+    }
+
+
+    const date =
+        new Date(dateString);
+
+
+    if (isNaN(date.getTime())) {
+        return dateString;
+    }
+
+
+    return date.toLocaleDateString(
+        "en-IN",
+        {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        }
+    );
+
+}
+
+
+
+/*
+=====================================================
+CALCULATE DAYS
+=====================================================
+*/
+
+function calculateDays(start, end) {
+
+    if (!start || !end) {
+        return 1;
+    }
+
+
+    const startDate =
+        new Date(start);
+
+    const endDate =
+        new Date(end);
+
+
+    const difference =
+        endDate - startDate;
+
+
+    const days =
+        Math.ceil(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    return days > 0 ? days : 1;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

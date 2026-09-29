@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmation | TravelMate</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">✈</span>
+
+            <span>TravelMate</span>
+
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Plan Trip
+            </a>
+
+            <a href="destinations.html">
+                Destinations
+            </a>
+
+            <a href="hotels.html">
+                Hotels
+            </a>
+
+            <a href="my-trips.html">
+                My Trips
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            Booking Confirmation
+        </h1>
+
+        <p>
+            Your TravelMate booking details
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOOKING SECTION
+===================================================== -->
+
+<section class="booking-section">
+
+    <div class="container">
+
+        <div class="booking-confirmation">
+
+
+            <!-- SUCCESS -->
+            
+            <div class="booking-success">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h2>
+                    Booking Confirmed!
+                </h2>
+
+                <p>
+                    Your hotel booking has been successfully confirmed.
+                </p>
+
+                <span
+                    class="booking-id"
+                    id="bookingId">
+
+                    Loading...
+
+                </span>
+
+            </div>
+
+
+
+            <!-- BOOKING DETAILS -->
+
+            <div class="booking-details">
+
+
+                <!-- DESTINATION -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Destination
+                    </span>
+
+                    <strong id="bookingDestination">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- DAYS -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Trip Duration
+                    </span>
+
+                    <strong id="bookingDays">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- TRAVELERS -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Travelers
+                    </span>
+
+                    <strong id="bookingTravelers">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- STARTING LOCATION -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Starting Location
+                    </span>
+
+                    <strong id="bookingStarting">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- HOTEL -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Hotel
+                    </span>
+
+                    <strong id="bookingHotel">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- HOTEL PRICE -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Hotel Price
+                    </span>
+
+                    <strong id="bookingPrice">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- BOOKING DATE -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Booking Date
+                    </span>
+
+                    <strong id="bookingDate">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <!-- TOTAL -->
+
+                <div class="booking-detail">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <strong
+                        id="bookingTotal"
+                        style="
+                            color:var(--primary-dark);
+                            font-size:20px;
+                        ">
+
+                        ₹0
+
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="booking-actions">
+
+                <a
+                    href="my-trips.html"
+                    class="btn btn-primary">
+
+                    View My Trips
+
+                </a>
+
+
+                <a
+                    href="dashboard.html"
+                    class="btn"
+                    style="
+                        background:#f5f9fc;
+                        color:var(--dark);
+                    ">
+
+                    Plan Another Trip
+
+                </a>
+
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="window.print()">
+
+                    Print Booking
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="js/main.js"></script>
+
+<script src="js/booking.js"></script>
+
+
+</body>
+
+</html>

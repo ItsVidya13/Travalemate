@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>TravelMate - Destinations</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="container nav-container">
+
+<a href="index.html" class="logo">
+    <span class="logo-icon">✈</span>
+    Travel<span>Mate</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="dashboard.html">Plan Trip</a>
+
+<a href="destinations.html" class="active">
+    Destinations
+</a>
+
+<a href="hotels.html">Hotels</a>
+
+<a href="my-trips.html">My Trips</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+<button
+    class="mobile-menu-btn"
+    id="mobileMenuBtn">
+    ☰
+</button>
+
+</div>
+
+</header>
+
+
+<section class="page-header">
+
+<div class="container">
+
+<h1>
+    Explore Destinations
+</h1>
+
+<p>
+    Choose a destination for your next adventure.
+</p>
+
+</div>
+
+</section>
+
+
+<main class="destinations-section">
+
+<div class="container">
+
+<div class="filter-bar">
+
+<input
+    type="text"
+    id="destinationSearch"
+    placeholder="Search destination...">
+
+<select id="destinationFilter">
+
+<option value="all">
+    All destinations
+</option>
+
+<option value="Tamil Nadu">
+    Tamil Nadu
+</option>
+
+<option value="Karnataka">
+    Karnataka
+</option>
+
+<option value="Kerala">
+    Kerala
+</option>
+
+<option value="Goa">
+    Goa
+</option>
+
+</select>
+
+</div>
+
+
+<div
+    class="destination-grid"
+    id="destinationGrid">
+</div>
+
+</div>
+
+</main>
+
+
+<script src="js/destinations.js"></script>
+
+</body>
+</html>

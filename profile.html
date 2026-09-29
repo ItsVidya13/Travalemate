@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | TravelMate</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">✈</span>
+
+            <span>TravelMate</span>
+
+        </a>
+
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Plan Trip
+            </a>
+
+            <a href="destinations.html">
+                Destinations
+            </a>
+
+            <a href="hotels.html">
+                Hotels
+            </a>
+
+            <a href="my-trips.html">
+                My Trips
+            </a>
+
+            <a href="profile.html" class="active">
+                Profile
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            My Profile
+        </h1>
+
+        <p>
+            Manage your TravelMate account and travel information.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFILE SECTION
+===================================================== -->
+
+<section class="profile-section">
+
+    <div class="container">
+
+        <div class="profile-layout">
+
+
+            <!-- =================================================
+                 PROFILE SIDEBAR
+            ================================================== -->
+
+            <aside class="profile-sidebar">
+
+                <div class="profile-avatar"
+                     id="profileAvatar">
+
+                    U
+
+                </div>
+
+
+                <h2 id="profileNameDisplay">
+                    Traveler
+                </h2>
+
+
+                <p id="profileEmailDisplay">
+                    traveler@example.com
+                </p>
+
+
+                <br>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="editProfileBtn">
+
+                    Edit Profile
+
+                </button>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 PROFILE CONTENT
+            ================================================== -->
+
+            <div class="profile-content">
+
+                <h2>
+                    Travel Overview
+                </h2>
+
+
+                <!-- STATS -->
+
+                <div class="profile-stats">
+
+                    <div class="profile-stat">
+
+                        <strong id="tripCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Trips
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-stat">
+
+                        <strong id="bookingCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Bookings
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-stat">
+
+                        <strong id="destinationCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Destinations
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PERSONAL INFORMATION
+                ================================================== -->
+
+                <div class="summary-card">
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+
+                    <form id="profileForm">
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="profileName">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="profileName"
+                                    placeholder="Enter your name"
+                                    required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="profileEmail">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="profileEmail"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="profilePhone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="profilePhone"
+                                    placeholder="Enter your phone number">
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="profileCountry">
+                                    Country
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="profileCountry"
+                                    placeholder="Enter your country">
+
+                            </div>
+
+
+
+                            <div class="form-group full">
+
+                                <label for="profileBio">
+                                    About You
+                                </label>
+
+                                <textarea
+                                    id="profileBio"
+                                    rows="4"
+                                    placeholder="Tell us something about yourself"></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="planner-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                Save Profile
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="btn"
+                                id="clearProfileBtn"
+                                style="
+                                    background:#f5f9fc;
+                                    color:var(--dark);
+                                    border:1px solid var(--border);
+                                ">
+
+                                Clear
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ACCOUNT INFORMATION
+                ================================================== -->
+
+                <div class="summary-card">
+
+                    <h2>
+                        Account Information
+                    </h2>
+
+
+                    <div class="summary-info">
+
+                        <div>
+
+                            <small>
+                                Account Status
+                            </small>
+
+                            <strong>
+                                Active
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Member Since
+                            </small>
+
+                            <strong id="memberSince">
+                                Today
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Travel Preference
+                            </small>
+
+                            <strong id="travelPreference">
+                                Not selected
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                Last Trip
+                            </small>
+
+                            <strong id="lastTrip">
+                                No trip yet
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <div class="summary-card">
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+
+                    <div class="planner-actions">
+
+                        <a
+                            href="dashboard.html"
+                            class="btn btn-primary">
+
+                            Plan New Trip
+
+                        </a>
+
+
+                        <a
+                            href="my-trips.html"
+                            class="btn"
+                            style="
+                                background:#f5f9fc;
+                                color:var(--dark);
+                                border:1px solid var(--border);
+                            ">
+
+                            View My Trips
+
+                        </a>
+
+
+                        <a
+                            href="hotels.html"
+                            class="btn"
+                            style="
+                                background:#f5f9fc;
+                                color:var(--dark);
+                                border:1px solid var(--border);
+                            ">
+
+                            Browse Hotels
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/main.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =================================================
+       ELEMENTS
+    ================================================= */
+
+    const profileForm =
+        document.getElementById("profileForm");
+
+    const profileName =
+        document.getElementById("profileName");
+
+    const profileEmail =
+        document.getElementById("profileEmail");
+
+    const profilePhone =
+        document.getElementById("profilePhone");
+
+    const profileCountry =
+        document.getElementById("profileCountry");
+
+    const profileBio =
+        document.getElementById("profileBio");
+
+    const profileNameDisplay =
+        document.getElementById("profileNameDisplay");
+
+    const profileEmailDisplay =
+        document.getElementById("profileEmailDisplay");
+
+    const profileAvatar =
+        document.getElementById("profileAvatar");
+
+    const clearProfileBtn =
+        document.getElementById("clearProfileBtn");
+
+    const editProfileBtn =
+        document.getElementById("editProfileBtn");
+
+
+
+    /* =================================================
+       LOAD PROFILE
+    ================================================= */
+
+    let profile = null;
+
+    try {
+
+        profile =
+            JSON.parse(
+                localStorage.getItem(
+                    "travelmateProfile"
+                ) || "null"
+            );
+
+    } catch (error) {
+
+        profile = null;
+
+    }
+
+
+
+    if (!profile) {
+
+        profile = {
+
+            name: "Traveler",
+
+            email: "traveler@example.com",
+
+            phone: "",
+
+            country: "",
+
+            bio: "",
+
+            memberSince:
+                new Date().toLocaleDateString(
+                    "en-IN"
+                )
+
+        };
+
+    }
+
+
+
+    /* =================================================
+       DISPLAY PROFILE
+    ================================================= */
+
+    function displayProfile() {
+
+        profileName.value =
+            profile.name || "";
+
+        profileEmail.value =
+            profile.email || "";
+
+        profilePhone.value =
+            profile.phone || "";
+
+        profileCountry.value =
+            profile.country || "";
+
+        profileBio.value =
+            profile.bio || "";
+
+
+        profileNameDisplay.textContent =
+            profile.name || "Traveler";
+
+
+        profileEmailDisplay.textContent =
+            profile.email ||
+            "traveler@example.com";
+
+
+        const name =
+            profile.name ||
+            "Traveler";
+
+
+        profileAvatar.textContent =
+            name.charAt(0).toUpperCase();
+
+    }
+
+
+
+    /* =================================================
+       TRIP DATA
+    ================================================= */
+
+    let trip = null;
+
+    let booking = null;
+
+    let hotel = null;
+
+
+    try {
+
+        trip =
+            JSON.parse(
+                localStorage.getItem(
+                    "travelmateTrip"
+                ) || "null"
+            );
+
+    } catch (error) {
+
+        trip = null;
+
+    }
+
+
+    try {
+
+        booking =
+            JSON.parse(
+                localStorage.getItem(
+                    "travelmateBooking"
+                ) || "null"
+            );
+
+    } catch (error) {
+
+        booking = null;
+
+    }
+
+
+    try {
+
+        hotel =
+            JSON.parse(
+                localStorage.getItem(
+                    "travelmateHotel"
+                ) || "null"
+            );
+
+    } catch (error) {
+
+        hotel = null;
+
+    }
+
+
+
+    /* =================================================
+       STATISTICS
+    ================================================= */
+
+    const tripCount =
+        document.getElementById("tripCount");
+
+    const bookingCount =
+        document.getElementById("bookingCount");
+
+    const destinationCount =
+        document.getElementById("destinationCount");
+
+    const lastTrip =
+        document.getElementById("lastTrip");
+
+    const travelPreference =
+        document.getElementById("travelPreference");
+
+    const memberSince =
+        document.getElementById("memberSince");
+
+
+    if (trip) {
+
+        tripCount.textContent = "1";
+
+        destinationCount.textContent = "1";
+
+        lastTrip.textContent =
+            trip.destination ||
+            "Available";
+
+        travelPreference.textContent =
+            trip.travelStyle ||
+            "Not selected";
+
+    } else {
+
+        tripCount.textContent = "0";
+
+        destinationCount.textContent = "0";
+
+        lastTrip.textContent =
+            "No trip yet";
+
+        travelPreference.textContent =
+            "Not selected";
+
+    }
+
+
+    if (booking) {
+
+        bookingCount.textContent = "1";
+
+    } else {
+
+        bookingCount.textContent = "0";
+
+    }
+
+
+    memberSince.textContent =
+        profile.memberSince ||
+        "Today";
+
+
+
+    /* =================================================
+       SAVE PROFILE
+    ================================================= */
+
+    profileForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            profile = {
+
+                name:
+                    profileName.value.trim(),
+
+                email:
+                    profileEmail.value.trim(),
+
+                phone:
+                    profilePhone.value.trim(),
+
+                country:
+                    profileCountry.value.trim(),
+
+                bio:
+                    profileBio.value.trim(),
+
+                memberSince:
+                    profile.memberSince ||
+                    new Date().toLocaleDateString(
+                        "en-IN"
+                    )
+
+            };
+
+
+            localStorage.setItem(
+                "travelmateProfile",
+                JSON.stringify(profile)
+            );
+
+
+            displayProfile();
+
+
+            alert(
+                "Profile saved successfully!"
+            );
+
+        }
+    );
+
+
+
+    /* =================================================
+       EDIT PROFILE
+    ================================================= */
+
+    editProfileBtn.addEventListener(
+        "click",
+        function () {
+
+            profileName.focus();
+
+            profileName.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+    );
+
+
+
+    /* =================================================
+       CLEAR PROFILE
+    ================================================= */
+
+    clearProfileBtn.addEventListener(
+        "click",
+        function () {
+
+            if (
+                !confirm(
+                    "Clear your profile information?"
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            profile = {
+
+                name: "Traveler",
+
+                email:
+                    "traveler@example.com",
+
+                phone: "",
+
+                country: "",
+
+                bio: "",
+
+                memberSince:
+                    new Date().toLocaleDateString(
+                        "en-IN"
+                    )
+
+            };
+
+
+            localStorage.setItem(
+                "travelmateProfile",
+                JSON.stringify(profile)
+            );
+
+
+            displayProfile();
+
+
+            alert(
+                "Profile information cleared."
+            );
+
+        }
+    );
+
+
+
+    /* =================================================
+       INITIALIZE
+    ================================================= */
+
+    displayProfile();
+
+});
+
+</script>
+
+
+</body>
+
+</html>
